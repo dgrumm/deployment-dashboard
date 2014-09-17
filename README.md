@@ -19,7 +19,7 @@ This app is meant to serve as a real time display of the soon to be deployed cod
 * Mac :  None!  You should be able to run locally
 * Windows : Vagrant, VirtualBox, PuTTY and PuTTY gen 
 
-#### Steps
+#### Setup the codebase
 1.  Clone the source code 
 2.  Add your Jira, SVN, and git credentials to the credentials.js file
 3.  Run this command in the root of your cloned project so that git will not try to commit any updates to the credentials file : git update-index --assume-unchanged utils/credentials.js
@@ -29,7 +29,7 @@ This app is meant to serve as a real time display of the soon to be deployed cod
 
 Now decide if you want to use Vagrant (if you are on Windows the answer is probably yes), or just run from your local machine.
 
-####Vagrant
+#### Vagrant
 1.  (Windows only) use PuTTY gen to generate a private key and save it at .vagrant.d folder in your home directory. You will see there’s already something in that folder called insecure_private_key. You want to rename it to anything else, and save the one private key you just generated with the name insecure_private_key. 
 2.  Do vagrant up
 3.  Go to the vagrant box
@@ -37,10 +37,10 @@ Now decide if you want to use Vagrant (if you are on Windows the answer is proba
   * (Windows only) use PuTTY to ssh into localhost:2222 (vagrant port)
 4.  Now you’re in the box, go to the synced folder by cd /vagrant
 
-In your Vagrant box or local machine :
-1.  Install all NodeJS libraries
+#### Run the app
+1. In your Vagrant box or local machine, install all NodeJS libraries
   * (Mac only) do npm install
-  * (Windows only) do npm install --no-bin-links (to avoid creating symlinks. Refer here)
+  * (Windows only) do npm install --no-bin-links (to avoid creating symlinks)
 2.  Start the server by nodejs server.js
   * You should see localhost:8000 running on your host machine. 
   * If you want to display the dashboard on your team monitor, navigate to “your_ip_address:8000” in the browser; You might need to install some browser plugin for auto refresh.
