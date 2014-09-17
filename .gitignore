@@ -1,0 +1,8 @@
+utils/credentials.js
+*.xlsx
+*.iml
+.idea
+node_modules/
+*swp
+.vagrant
+
