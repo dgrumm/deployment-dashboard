@@ -6,10 +6,8 @@ var excelbuilder = require('msexcel-builder');
 var jira = require('./utils/jira_client');
 var svn = require('./utils/svn_client');
 var github = require('./utils/github_client');
-var health_page = require('./utils/health_page_client');
 
 var routes = require('./routes');
-
 var app = express();
 
 app.configure(function () {

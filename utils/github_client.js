@@ -12,7 +12,7 @@ var GithubClient = {
         var auth = 'Basic ' + new Buffer(user.username + ":" + user.password).toString("base64");
         var options = {
             host: configuration.get_github_host(),
-            path: '/api/v3/repos/example-repo-group/'+ repo +'/commits?latest_sha='+from,
+            path: '/api/v3/repos/regional-inventory/'+ repo +'/commits?latest_sha='+from,
             headers: {'authorization': auth}
         };
 
