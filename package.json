@@ -1,0 +1,25 @@
+{
+  "name": "deployment-dashboard",
+  "version": "0.0.1",
+  "description": "a dashboard for deployments",
+  "main": "./server",
+  "scripts": {
+    "test": "grunt mochaTest"
+  },
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "jira-api": "~0.2.2",
+    "underscore": "~1.6.0",
+    "express": "~3.5.0",
+    "xml2js": "~0.4.1",
+    "q": "~2.0.0",
+    "msexcel-builder": "0.0.2"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "chai-as-promised": "4.1.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "mocha": "~1.18.0",
+    "grunt-mocha-test": "~0.8.1"
+  }
+}

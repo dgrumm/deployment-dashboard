@@ -1,0 +1,48 @@
+.status_progress {
+    color: #d63852;
+}
+
+.status_validation {
+    color: #5dc2a8;
+}
+
+.status_signoff {
+    color: #43c45d;
+}
+
+.status_reject {
+    color: #db7521;
+}
+
+.status_done {
+    color: #3cad10;
+}
+
+.status_backlog {
+    color: #b567db;
+}
+
+.row-project {
+    color: #ffffff;
+    background-color: #18bc9c;
+    border-color: #18bc9c;
+    margin-right: 0.25%;
+    margin-left: 0.25%;
+}
+
+.commit-box {
+    border-bottom: dotted #5a4e61;
+    border-bottom-width: 1px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+.commit-msg {
+    color: #5a4e61;
+}
+
+.each-file {
+    font-size: 80%;
+    overflow: hidden;
+}
+

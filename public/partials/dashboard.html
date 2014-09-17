@@ -1,0 +1,56 @@
+<div >
+
+    <div>
+        <button style="background-color:#18bc9c;margin-left: 17px; color: #ffffff" type="submit" ng-click="exportData()"><h3>Export
+            data into spread-sheet</h3></button>
+    </div>
+
+    <div>
+        <button class="dashboardButton" ng-click="projectSettings()" >
+            Modify displayed projects
+        </button>
+    </div>
+    <br/>
+
+    <div ng-repeat="project in allProjects" class="col-md-6">
+        <div class="row row-project">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1> {{project.name}} </h1>
+            </div>
+                <button class="dashboardButton" style="float:right;" ng-click="removeProject(project)"> Remove Project </button>
+        </div>
+
+        <div class="row row-project">
+            <div class="col-md-12">
+                <h4>Production Revision : {{project.start}}</h4>
+            </div>
+        </div>
+
+        <accordion>
+            <accordion-group ng-repeat="story in project.stories">
+                <accordion-heading>
+                    <div class="row"
+                         ng-class="{status_progress: {{story.stage == 'In Progress'}},
+                                    status_validation: {{story.stage == 'Validation'}},
+                                    status_signoff: {{story.stage == 'Signoff'}},
+                                    status_reject: {{story.stage == 'Rejected'}},
+                                    status_backlog: {{story.stage == 'Backlog'}},
+                                    status_done: {{story.stage == 'Done'}}}">
+                        <div class="col-md-3">{{story.key}}</div>
+                        <div class="col-md-7">{{story.summary}}</div>
+                        <div class="col-md-2">{{story.stage}}</div>
+                    </div>
+                </accordion-heading>
+                <div class="row commit-box" ng-repeat="commit in story.commits">
+                    <div class="col-md-12 commit-msg"> {{commit.msg[0]}}</div>
+                    <div ng-repeat="file in commit.path">
+                        <div class="each-file col-md-12"> {{file._}}</div>
+                    </div>
+
+                </div>
+            </accordion-group>
+        </accordion>
+
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div ng-controller="settingsController">
+           <button style="background-color:red; color:black;" ng-click="hello()" >
+            Add Project
+        	</button>
+        <a ng-href="#/"> Return to dashboards </a>
+        <form novalidate class="simple-form">
+		    Name: <input type="text" ng-model="project.name" /><br />
+		    Start revision #: <input type="text" ng-model="project.start" /><br />
+		    End Revision #: <input type="text" ng-model="project.end" /> <br />
+		    SVN: <input type="text" ng-model="project.svn" /><br />
+		    Branch: <input type="text" ng-model="project.branch" />
+		    <button ng-click="addProject(project)">SAVE</button>
+  		</form>
+
+</div>
