@@ -10,7 +10,7 @@
     "grunt": "~0.4.2",
     "jira-api": "~0.2.2",
     "underscore": "~1.6.0",
-    "express": "~3.5.0",
+    "express": "~4.17.1",
     "xml2js": "~0.4.1",
     "q": "~2.0.0",
     "msexcel-builder": "0.0.2"
